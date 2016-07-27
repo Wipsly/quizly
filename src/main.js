@@ -5,6 +5,12 @@ import QuestionOne from './components/questions/QuestionOne.vue'
 
 import VueRouter from 'vue-router'
 
+import VueSimpleStore from './store/vue-simple-store.js'
+import Points from './store/points.js'
+
+Vue.use(VueSimpleStore, {
+	stores: [Points]
+})
 Vue.use(VueRouter)
 
 const router = new VueRouter({

@@ -23,18 +23,8 @@
             </div>
         </div>
     </div>
-    {{ points }}
+    {{ state.points.points }}
 </template>
 
-<script>
-    import store from '../store/store'
 
-    export default{
-        data() {
-            return {
-                points: store.state.points
-            }
-        }
-    }
-</script>
 
