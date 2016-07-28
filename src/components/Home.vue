@@ -1,30 +1,21 @@
 <template>
     <div class="row">
-        <a v-link="'questionone'">
-            <div class="col-md-3">
-                <div class="well">
-                    Question One
-                </div>
-            </div>
-        </a>
-        <div class="col-md-3">
-            <div class="well">
-                Question Two
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="well">
-                Question Three
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="well">
-                Question Four
-            </div>
-        </div>
-    </div>
-    {{ state.points.points }}
+        <point points="100" link="question"></point>
+        <point points="200" link="question"></point>
+        <point points="300" link="question"></point>
+        <point points="400" link="question"></point>
 </template>
+
+<script>
+import Point from './Point'
+
+export default {
+    components: {
+        Point: Point
+    }
+}
+</script>
+
 
 
 

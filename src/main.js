@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import Home from './components/Home.vue'
-import QuestionOne from './components/questions/QuestionOne.vue'
+import Jumbo from './components/Jumbo.vue'
 
 import VueRouter from 'vue-router'
 
@@ -13,6 +13,11 @@ Vue.use(VueSimpleStore, {
 })
 Vue.use(VueRouter)
 
+Vue.transition('fade', { 
+	enterClass: 'lightSpeedIn',
+	leaveClass: 'lightSpeedOut'
+})
+
 const router = new VueRouter({
     history: true
 })
@@ -22,8 +27,8 @@ router.map({
     '/': {
         component: Home
     },
-    '/questionone': {
-        component: QuestionOne
+    '/question': {
+        component: Jumbo
     }
 })
 
